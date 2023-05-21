@@ -36,6 +36,9 @@ body {
     color: var(--main-text-color);
     background-color: var(--body-background-color);
 }
+body.modal-open {
+    overflow: hidden;
+}
 
 /*=============================================
 =            basic style            =
@@ -215,7 +218,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 100%;
+    z-index: 1000;
     max-height: 796px;
     background: #ffffff;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -224,6 +227,7 @@ img {
     pointer-events: none;
     overflow-y: scroll;  
     transition: opacity var(--transition-time-cubic), visibility var(--transition-time-cubic);
+    text-align: center;
  }
  .container.menu-container {
     position: relative;
@@ -239,6 +243,9 @@ img {
  }
  .page-nav-mob {
     margin-bottom: auto;
+ }
+ .mob-menu-item:not(:last-child) {
+    margin-bottom: 40px;
  }
  .mob-menu-link {
     font-weight: 700;
@@ -268,6 +275,10 @@ img {
     line-height: 1.11;
     color: #4d5ae5;
 }
+.current {
+    position: relative;
+    color: #4d5ae5;
+}
  .mob-list {
     display: flex;
     align-items: center;
@@ -288,10 +299,24 @@ img {
     justify-content: center;
  }
 
-
-
-
-
+ .mob-icon {
+    fill: currentColor;
+ }
+ .mob-menu-close {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
 @media screen and (max-width: 767px) {
     .container {
         max-width: 428px;
@@ -414,7 +439,7 @@ img {
         padding: 24px 0;
         transition: color var(--active-page-color);
     }
-    .active::after {
+    .current::after {
         display: block;
         content: '';
         width: 100%;
@@ -435,26 +460,87 @@ img {
     .contact-nav:focus {
         color: #404bbf;
     }
-    .mob-list {
+    .page-title {
+        max-width: 496px;
+        font-size: 56px;
+        line-height: 1.07;
+        margin-bottom: 48px;
+    }
+    .desc-container {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+    .desc-container {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+    .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 64px 24px;
         justify-content: center;
     }
-    .mob-link {
-        width: 40px;
-        height: 40px;
+    .card-content {
+        flex-basis: calc((100% - 24px) / 2);
     }
-    .mob-icon-link {
+    .customers-container {
+        gap: 72px 24px;
+    }
+    .icon-customers {
+        width: 168px;
+    }
+    .footer-container {
         display: flex;
-        width: 100%;
-        height: 100%;
-        background-color: #4d5ae5;
-        color: #f4f4fd;
-        border-radius: 50%;
+        flex-wrap: wrap;
+    }
+    .subscripe {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        align-items: flex-end;
+        font-weight: 500;
+    }
+    .input-text {
+        min-width: 264px;
+    }
+    .btn-filter {
+        justify-content: center;
+        align-items: center;
+    }
+    .cards-filter {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
+    }
 
-        align-items: center;
-        justify-content: center;
+}
+@media screen and (max-width: 1157px) {
+    .container {
+        padding: 0 16px;
     }
+    .img-section {
+        display: none;
+    }
+    .icon-desc {
+        display: none;
+    }
+    .info {
+        font-weight: 500;
+    }
+    .overley {
+        display: none;
+    }
+    .card-link {
+        background: #ffffff;
+        border: 1px solid rgba(244, 244, 253, 1);
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    }
+    .thumb {
+        max-width: 396px;
+    }
+    
 }
 
 /*=============================================
