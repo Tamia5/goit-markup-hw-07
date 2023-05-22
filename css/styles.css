@@ -48,7 +48,7 @@ ul {
     margin: 0;
 }
 .container {
-    width: 1158px;
+    /* width: 1158px; */
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -58,7 +58,7 @@ ul {
     }
 }
 
-@media only screen and (min-width: 768px) and(max-width:1157) {
+@media only screen and (min-width: 768px) and (max-width: 1157) {
     .container {
         max-width: 768px;
     }
@@ -533,6 +533,25 @@ img {
         padding-bottom: 96px;
     }
 }
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .container-team {
+        max-width: 264px;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .container-team {
+        max-width: 552px;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .container-team {
+        max-width: 1158px;
+    }
+}
 .team-container {
     display: flex;
     gap: 24px;
@@ -560,7 +579,7 @@ img {
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .card-content{
-        width: calc((100% - 0px) / 1);
+        margin: 0 auto;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
@@ -654,7 +673,7 @@ img {
     }
 }
 .icon-customers {
-    width: calc((100% - 120px) / 6);
+    width: 168px;
     height: 88px;
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -970,6 +989,11 @@ img {
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .subscribe {
         margin-left: 0px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .subscribe {
+       margin-left: 0px;
     }
 }
 .subsc-form {
