@@ -115,6 +115,15 @@ img {
         font-weight: 500;
     }
 }
+.info-team {
+    font-family: var(--main-font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+}
+
 /*=============================================
 =      MOBILE MENe     =
 =============================================*/
@@ -318,9 +327,9 @@ img {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        padding-bottom: 112px;
-        padding-top: 112px;
-        min-height: 0px;
+        padding-bottom: 96px;
+        padding-top: 96px;
+        height: 432px;
     }
 }
 @media (min-device-pixel-ratio: 2),
@@ -334,8 +343,8 @@ img {
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
     .title-section {
-        padding-top: 112px;
-        padding-bottom: 112px;
+        padding-top: 96px;
+        padding-bottom: 96px;
         min-height: auto;
         background-image: url(../images/people-office-tablet_@1x.jpg);
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
@@ -444,7 +453,34 @@ img {
         text-transform: capitalize;
     }
 }
+.sub-title_team {
+    font-family: var(--main-font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--headers-color);
+    margin-bottom: 8px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .sub-title-team {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+    }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .sub-titl-team {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.1;
+        text-transform: capitalize;
+    }
+}
 .part-title {
     line-height: 1.1;
 }
@@ -854,7 +890,6 @@ img {
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .footer-container-left {
         margin: 0 auto;
-        margin-bottom: 72px;
     }
 }
 
@@ -958,7 +993,7 @@ img {
     position: absolute;
     width: 24px;
     height: 24px;
-    left: 360px;
+    right: 24px;
     top: 24px;
     display: flex;
     justify-content: center;
@@ -1045,6 +1080,11 @@ img {
 
     transition: background-color var(--transition-time-cubic), box-shadow var(--transition-time-cubic);
     cursor: pointer;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .btn-subscribe {
+        margin-left: 0px;
+    }
 }
 .btn-subscribe::after {
     content: '';
